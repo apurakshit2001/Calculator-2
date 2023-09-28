@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon"
+        href="./images/png-transparent-peace-symbols-peace-symbol-miscellaneous-poster-monochrome-thumbnail.png"
+        type="image/x-icon">
+    <title>Easy Calculator</title>
+    <script src="script2.js" defer></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" id="result" name="display" readonly />
+        </div>
+        <div class="buttons">
+            <div class="button-row">
+                <input type="button" value="AC" class="action-button"
+                    onclick="document.getElementById('result').value = ''">
+                <input type="button" value="%" class="operator-button">
+                <input type="button" value="←" class="operator-button" onclick="removeLastCharacter()">
+                <input type="button" value="/" class="operator-button">
+            </div>
+            <div class="button-row">
+                <input type="button" value="7" onclick="document.getElementById('result').value += '7'"
+                    class="number-button">
+                <input type="button" value="8" onclick="document.getElementById('result').value += '8'"
+                    class="number-button">
+                <input type="button" value="9" onclick="document.getElementById('result').value += '9'"
+                    class="number-button">
+                <input type="button" value="*" onclick="document.getElementById('result').value += '*'"
+                    class="operator-button">
+            </div>
+            <div class="button-row">
+                <input type="button" value="4" onclick="document.getElementById('result').value += '4'"
+                    class="number-button">
+                <input type="button" value="5" onclick="document.getElementById('result').value += '5'"
+                    class="number-button">
+                <input type="button" value="6" onclick="document.getElementById('result').value += '6'"
+                    class="number-button">
+                <input type="button" value="-" onclick="document.getElementById('result').value += '-'"
+                    class="operator-button">
+            </div>
+            <div class="button-row">
+                <input type="button" value="1" onclick="document.getElementById('result').value += '1'"
+                    class="number-button">
+                <input type="button" value="2" onclick="document.getElementById('result').value += '2'"
+                    class="number-button">
+                <input type="button" value="3" onclick="document.getElementById('result').value += '3'"
+                    class="number-button">
+                <input type="button" value="+" onclick="document.getElementById('result').value += '+'"
+                    class="operator-button bigger">
+            </div>
+            <div class="button-row low">
+                <input type="button" value="0" onclick="document.getElementById('result').value += '0'"
+                    class="number-button">
+                <input type="button" value="." onclick="document.getElementById('result').value += '.'"
+                    class="number-button dot-point">
+
+                <input type="button" value="√" onclick="document.getElementById('result').value += '√'"
+                    class="number-button root">
+
+                <input type="button" value="=" class="action-button bigger equal"
+                    onclick="document.getElementById('result').value = eval(document.getElementById('result').value)">
+
+
+                <input type="button" value="UND☮" class="undo" onclick="undoLastAction()">
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
